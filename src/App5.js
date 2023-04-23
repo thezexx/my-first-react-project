@@ -32,7 +32,7 @@ function App() {
         </button>
       </form>
       <ul>
-        {state.todos.map((todo, index) => (
+        {state.todos.reverse().map((todo, index) => (
           <li key={index}>{todo}</li>
         ))}
       </ul>

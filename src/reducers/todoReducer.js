@@ -1,4 +1,5 @@
 function reducer(state, action) {
+  console.log(state, action);
   switch (action.type) {
     case "SET_TODO":
       return {
@@ -9,8 +10,10 @@ function reducer(state, action) {
       return {
         ...state,
         todo: "",
-        todos: [...state.todos, action.todo],
+        todos: [...state.todos, action.value],
       };
+    default: 
+      return;
   }
 }
 
