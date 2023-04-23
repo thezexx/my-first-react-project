@@ -12,6 +12,11 @@ function reducer(state, action) {
         todo: "",
         todos: [...state.todos, action.value],
       };
+    case "SET_SEARCH":
+      return {
+        ...state,
+        search: action.value
+      }
     default: 
       return;
   }
